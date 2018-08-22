@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B580C35F1AE73775006C31BC"
-               BuildableName = "Try_downStage.app"
+               BuildableName = "HappyDownStages.app"
                BlueprintName = "Try_downStage"
                ReferencedContainer = "container:Try_downStage.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B580C35F1AE73775006C31BC"
-            BuildableName = "Try_downStage.app"
+            BuildableName = "HappyDownStages.app"
             BlueprintName = "Try_downStage"
             ReferencedContainer = "container:Try_downStage.xcodeproj">
          </BuildableReference>
@@ -58,11 +58,12 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B580C35F1AE73775006C31BC"
-            BuildableName = "Try_downStage.app"
+            BuildableName = "HappyDownStages.app"
             BlueprintName = "Try_downStage"
             ReferencedContainer = "container:Try_downStage.xcodeproj">
          </BuildableReference>
@@ -76,11 +77,12 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B580C35F1AE73775006C31BC"
-            BuildableName = "Try_downStage.app"
+            BuildableName = "HappyDownStages.app"
             BlueprintName = "Try_downStage"
             ReferencedContainer = "container:Try_downStage.xcodeproj">
          </BuildableReference>
