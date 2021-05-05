@@ -48,7 +48,6 @@
 		B54655F71BA1ECE000CA7FBA /* play_board_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B54655F61BA1ECE000CA7FBA /* play_board_bg.png */; };
 		B54655F91BA2521E00CA7FBA /* leader_board_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = B54655F81BA2521E00CA7FBA /* leader_board_btn.png */; };
 		B54655FB1BA26E7900CA7FBA /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = B54655FA1BA26E7900CA7FBA /* lock.png */; };
-		B54656021BA2B56300CA7FBA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B54656051BA2B56300CA7FBA /* Localizable.strings */; };
 		B54656031BA2B56300CA7FBA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B54656051BA2B56300CA7FBA /* Localizable.strings */; };
 		B54656091BA2B88A00CA7FBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B580C3771AE73775006C31BC /* Main.storyboard */; };
 		B54656161BA2BA6500CA7FBA /* en_mainmenu.png in Resources */ = {isa = PBXBuildFile; fileRef = B54656151BA2BA6500CA7FBA /* en_mainmenu.png */; };
@@ -73,7 +72,6 @@
 		B54656C51BABE23C00CA7FBA /* en_restart_btn01png.png in Resources */ = {isa = PBXBuildFile; fileRef = B54656C21BABE23C00CA7FBA /* en_restart_btn01png.png */; };
 		B54656C61BABE23C00CA7FBA /* en_restart_btn02png.png in Resources */ = {isa = PBXBuildFile; fileRef = B54656C31BABE23C00CA7FBA /* en_restart_btn02png.png */; };
 		B54656C71BABE23C00CA7FBA /* en_restart_btn02png.png in Resources */ = {isa = PBXBuildFile; fileRef = B54656C31BABE23C00CA7FBA /* en_restart_btn02png.png */; };
-		B54656CB1BABEA9C00CA7FBA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B580C3921AE73775006C31BC /* InfoPlist.strings */; };
 		B546572A1BAF870000CA7FBA /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B54657021BAF870000CA7FBA /* .gitignore */; };
 		B546572B1BAF870000CA7FBA /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B54657021BAF870000CA7FBA /* .gitignore */; };
 		B546572C1BAF870000CA7FBA /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = B54657041BAF870000CA7FBA /* Appirater.m */; };
@@ -109,7 +107,6 @@
 		B54657981BAFB4EB00CA7FBA /* jp_attack_on_gaint_cat_ad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B54657831BAFB4EB00CA7FBA /* jp_attack_on_gaint_cat_ad.jpg */; };
 		B54657991BAFB4EB00CA7FBA /* jp_attack_on_gaint_cat_ad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B54657831BAFB4EB00CA7FBA /* jp_attack_on_gaint_cat_ad.jpg */; };
 		B546579D1BAFB8C700CA7FBA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B546579B1BAFB8C700CA7FBA /* Localizable.strings */; };
-		B546579E1BAFB8C700CA7FBA /* Try_downStage-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B580C36D1AE73775006C31BC /* Try_downStage-Info.plist */; };
 		B57795601B0C557000ABE278 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = B577955F1B0C557000ABE278 /* Player.m */; };
 		B57795631B0C569500ABE278 /* GameLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B57795621B0C569500ABE278 /* GameLevelViewController.m */; };
 		B57795661B0C572A00ABE278 /* BitmapUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B57795651B0C572A00ABE278 /* BitmapUtil.m */; };
@@ -117,7 +114,6 @@
 		B580C3661AE73775006C31BC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B580C3651AE73775006C31BC /* CoreGraphics.framework */; };
 		B580C3681AE73775006C31BC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B580C3671AE73775006C31BC /* UIKit.framework */; };
 		B580C36A1AE73775006C31BC /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B580C3691AE73775006C31BC /* SpriteKit.framework */; };
-		B580C3701AE73775006C31BC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B580C36E1AE73775006C31BC /* InfoPlist.strings */; };
 		B580C3721AE73775006C31BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B580C3711AE73775006C31BC /* main.m */; };
 		B580C3761AE73775006C31BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B580C3751AE73775006C31BC /* AppDelegate.m */; };
 		B580C37C1AE73775006C31BC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B580C37B1AE73775006C31BC /* ViewController.m */; };
@@ -233,6 +229,7 @@
 		B5AFFD8C1B42A9C60062ABF7 /* submit_score_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = B5AFFD241B42A9C60062ABF7 /* submit_score_btn.png */; };
 		B5AFFD8D1B42A9C60062ABF7 /* top_spiked_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = B5AFFD251B42A9C60062ABF7 /* top_spiked_bar.png */; };
 		B5AFFD8E1B42A9C60062ABF7 /* win.png in Resources */ = {isa = PBXBuildFile; fileRef = B5AFFD261B42A9C60062ABF7 /* win.png */; };
+		B5C61570263DA88F00CFDD98 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B580C36E1AE73775006C31BC /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -889,8 +886,10 @@
 				TargetAttributes = {
 					B580C35F1AE73775006C31BC = {
 						DevelopmentTeam = T6VV6T753H;
+						ProvisioningStyle = Automatic;
 					};
 					B580C3871AE73775006C31BC = {
+						DevelopmentTeam = T6VV6T753H;
 						TestTargetID = B580C35F1AE73775006C31BC;
 					};
 				};
@@ -900,6 +899,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 				"zh-Hant",
@@ -964,8 +964,6 @@
 				B54656221BA2D8E700CA7FBA /* en_continue_btn02png.png in Resources */,
 				B5AFFD691B42A9C60062ABF7 /* player_boy_walk03.png in Resources */,
 				B5AFFD481B42A9C60062ABF7 /* frame.png in Resources */,
-				B54656021BA2B56300CA7FBA /* Localizable.strings in Resources */,
-				B580C3701AE73775006C31BC /* InfoPlist.strings in Resources */,
 				B546572A1BAF870000CA7FBA /* .gitignore in Resources */,
 				B5AFFD5F1B42A9C60062ABF7 /* player_boy_down_left.png in Resources */,
 				B54655E81BA122BF00CA7FBA /* new_bg2_3.png in Resources */,
@@ -979,6 +977,7 @@
 				B5AFFD431B42A9C60062ABF7 /* footboard_unstable3.png in Resources */,
 				B50ACFC01B8FDC0C003D6BF1 /* s3.png in Resources */,
 				B5AFFD291B42A9C60062ABF7 /* background.png in Resources */,
+				B5C61570263DA88F00CFDD98 /* InfoPlist.strings in Resources */,
 				B5AFFD2C1B42A9C60062ABF7 /* bg2.jpg in Resources */,
 				B5AFFD2B1B42A9C60062ABF7 /* bg1.png in Resources */,
 				B54657901BAFB4EB00CA7FBA /* Shoot_Learning_ad.png in Resources */,
@@ -996,7 +995,6 @@
 				B54657961BAFB4EB00CA7FBA /* en_attack_on_gaint_cat_ad.jpg in Resources */,
 				B5AFFD8A1B42A9C60062ABF7 /* second_s.png in Resources */,
 				B5AFFD591B42A9C60062ABF7 /* mainmenu.png in Resources */,
-				B54656CB1BABEA9C00CA7FBA /* InfoPlist.strings in Resources */,
 				B50ACFC21B8FDC0C003D6BF1 /* s5.png in Resources */,
 				B5AFFD391B42A9C60062ABF7 /* footboard_moving_left2.png in Resources */,
 				B54657301BAF870000CA7FBA /* AppiraterLocalizable.strings in Resources */,
@@ -1099,7 +1097,6 @@
 				B5AFFD811B42A9C60062ABF7 /* second_2.png in Resources */,
 				B5AFFD881B42A9C60062ABF7 /* second_9.png in Resources */,
 				B5AFFD511B42A9C60062ABF7 /* left_keyboard_btn.png in Resources */,
-				B546579E1BAFB8C700CA7FBA /* Try_downStage-Info.plist in Resources */,
 				B54655FB1BA26E7900CA7FBA /* lock.png in Resources */,
 				B5AFFD761B42A9C60062ABF7 /* player_selector_bg.png in Resources */,
 				B5AFFD7C1B42A9C60062ABF7 /* right_keyboard_btn.png in Resources */,
@@ -1381,13 +1378,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.1.2105030;
+				DEVELOPMENT_TEAM = T6VV6T753H;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Try_downStage/Try_downStage-Prefix.pch";
 				INFOPLIST_FILE = "Try_downStage/Try_downStage-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_NAME = HappyDownStages;
 				PROVISIONING_PROFILE = "739bf75c-e48a-4a9d-b794-95713c175b1e";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1398,13 +1400,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.1.2105030;
+				DEVELOPMENT_TEAM = T6VV6T753H;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Try_downStage/Try_downStage-Prefix.pch";
 				INFOPLIST_FILE = "Try_downStage/Try_downStage-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_NAME = HappyDownStages;
 				PROVISIONING_PROFILE = "739bf75c-e48a-4a9d-b794-95713c175b1e";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1414,6 +1421,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Try_downStage.app/Try_downStage";
+				DEVELOPMENT_TEAM = T6VV6T753H;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1436,6 +1444,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Try_downStage.app/Try_downStage";
+				DEVELOPMENT_TEAM = T6VV6T753H;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
