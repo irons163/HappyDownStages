@@ -11,10 +11,10 @@
 
 @interface DatabaseManager : NSObject
 
-+(id)sharedInstance;
--(void)insertWithName:(NSString*)name withScore:(int)score;
--(NSArray*)load;
++ (id)sharedInstance;
+- (void)insertWithName:(NSString *)name withScore:(int)score;
+- (NSArray *)load;
 
-@property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
+@property (nonatomic,strong) NSManagedObjectContext *managedObjectContext;
 
 @end

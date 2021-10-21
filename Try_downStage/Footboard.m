@@ -33,7 +33,7 @@
  * @param height 地板圖片的高
  * @param width 地板圖片的寬
  */
--(void)setFrameX:(int) x y:(int) y h:(int) height w:(int) width {
+- (void)setFrameX:(int)x y:(int)y h:(int)height w:(int)width {
     self->x = x;
     self->y = y;
     self->height = height;
@@ -53,20 +53,20 @@
         bitmap2 = bitmapUtil.footboard_moving_left2_bitmap;
         bitmap3 = bitmapUtil.footboard_moving_left3_bitmap;
         bitmap = bitmap1;
-    } else if (which == 2){ //往右地板
+    } else if (which == 2) { //往右地板
         bitmap = bitmapUtil.footboard_moving_right1_bitmap;
-    }else if(which == 3){ //不穩定地板
+    } else if(which == 3) { //不穩定地板
         bitmap1 = bitmapUtil.footboard_unstable1_bitmap;
         bitmap2=bitmapUtil.footboard_unstable2_bitmap;
         bitmap3=bitmapUtil.footboard_unstable3_bitmap;
         bitmap = bitmap1;
-    }else if(which==4){ //滑動地板
+    } else if(which == 4) { //滑動地板
         //			 bitmap = BitmapUtil.footboard_spring_bitmap;
         bitmap1 = bitmapUtil.footboard_wood_bitmap;
         bitmap2=bitmapUtil.footboard_wood2_bitmap;
         bitmap3=bitmapUtil.footboard_wood3_bitmap;
         bitmap = bitmapUtil.footboard_wood_bitmap;
-    }else if(which==5){ //陷阱地板
+    } else if(which == 5) { //陷阱地板
         bitmap = bitmapUtil.footboard_spiked_bitmap;
     }
     
@@ -74,32 +74,28 @@
     
     int random = arc4random_uniform(6);
     
-			 if(random==1){
-                 toolNum=random;
-             }else if(random==2){
-                 toolNum=random;
-             }else if(random==4){
-                 toolNum=random;
-             }else{
-                 toolNum=0;
-             }
-    
+    if (random == 1) {
+        toolNum = random;
+    } else if (random == 2) {
+        toolNum = random;
+    } else if (random == 4) {
+        toolNum = random;
+    } else {
+        toolNum=0;
+    }
 }
-
 
 /**
  * 繪圖動作
  * @param canvas 要繪圖的畫布
  * @param dy 圖片Y軸移動距離
  */
--(void)drawDy:(float) dy {
-    
+- (void)drawDy:(float)dy {
     y += dy;
     self.position = CGPointMake(self.position.x, y);
-    //		Rect rect1 = new Rect(x,y,x+width,y+height);
     CGRect rect1 = CGRectMake(x,y,width,height);
     
-    if(which == 1){ //往左地板
+    if (which == 1) { //往左地板
         //圖片有兩張，進行切換，但這裡的方法很笨，應該有更好的方法
         //			if(animStep<10){
         //				bitmap = bitmap1;
@@ -111,64 +107,64 @@
         //				animStep=0;
         //			}
         
-        if(animStep%3==0){
+        if (animStep % 3 == 0) {
             bitmap = bitmapUtil.footboard_moving_left1_bitmap;
             animStep++;
-        }else if(animStep%3==1){
+        } else if(animStep % 3 == 1) {
             bitmap = bitmapUtil.footboard_moving_left2_bitmap;
             animStep++;
-        }else{
+        } else {
             bitmap = bitmapUtil.footboard_moving_left3_bitmap;
             animStep=0;
         }
-        
-    }else if(which == 2){
-        if(animStep%3==0){
+    } else if(which == 2) {
+        if (animStep % 3 == 0) {
             bitmap = bitmapUtil.footboard_moving_right1_bitmap;
             animStep++;
-        }else if(animStep%3==1){
+        } else if (animStep % 3 == 1) {
             bitmap = bitmapUtil.footboard_moving_right2_bitmap;
             animStep++;
-        }else{
+        } else {
             bitmap = bitmapUtil.footboard_moving_right3_bitmap;
-            animStep=0;
+            animStep = 0;
         }
-    }else if(which == 3){ //不穩定地板
-        if(animStep<10){
+    } else if (which == 3) { //不穩定地板
+        if (animStep < 10) {
             bitmap = bitmap1; //初始圖片
-        }else if(animStep<20){
+        } else if (animStep < 20) {
             bitmap = bitmap2; //產生裂痕
-        }else if(animStep<28){
+        } else if (animStep < 28) {
             bitmap = bitmap3; //產生裂痕
-        }else if(animStep>=30){
-            bitmap=nil; //地板不見
+        } else if (animStep >= 30) {
+            bitmap = nil; //地板不見
         }
-    }else if(which == 4){ //朽木地板
-        if(animStep%10==0){
+    } else if (which == 4) { //朽木地板
+        if (animStep % 10 == 0) {
             bitmap = bitmap1;
-        }else if(animStep%10==1){
+        } else if (animStep % 10 == 1) {
             bitmap = bitmap2;
-        }else if(animStep%10==3){
+        } else if (animStep % 10 == 3) {
             bitmap = bitmap3;
-        }else if(animStep%10==5){
-            animStep=0;
-            bitmap=nil;
+        } else if (animStep % 10 == 5) {
+            animStep = 0;
+            bitmap = nil;
         }
     }
     
-    if(bitmap!=nil)
+    if (bitmap != nil)
         self.texture = bitmap;
 }
 
 /**
  * 計算地板甚麼時候不見，只在不穩定和朽木地板的情況下使用。
  */
--(void) setCount{
-    if(which==3 || which==4){
-        animStep++;}
+- (void)setCount {
+    if (which == 3 || which == 4) {
+        animStep++;
+    }
 }
 
--(void) setWhich:(int) witch{
+- (void)setWhich:(int)witch {
     self->which = witch;
     
     if (which == 0) {  //普通地板
@@ -177,65 +173,64 @@
         bitmap1 = bitmapUtil.footboard_moving_left1_bitmap;
         bitmap2 = bitmapUtil.footboard_moving_left2_bitmap;
         bitmap = bitmap1;
-    } else if (which == 2){ //往右地板
+    } else if (which == 2) { //往右地板
         bitmap = bitmapUtil.footboard_moving_right1_bitmap;
-    }else if(which == 3){ //不穩定地板
+    } else if (which == 3) { //不穩定地板
         bitmap1 = bitmapUtil.footboard_unstable1_bitmap;
         bitmap2=bitmapUtil.footboard_unstable2_bitmap;
         bitmap = bitmap1;
-    }else if(which==4){ //朽木地板
+    } else if (which == 4) { //朽木地板
         //			 bitmap = BitmapUtil.footboard_spring_bitmap;
         bitmap1 = bitmapUtil.footboard_wood_bitmap;
         bitmap2=bitmapUtil.footboard_wood2_bitmap;
         bitmap3=bitmapUtil.footboard_wood3_bitmap;
         bitmap = bitmapUtil.footboard_wood_bitmap;
-    }else if(which==5){ //陷阱地板
+    } else if (which == 5) { //陷阱地板
         bitmap = bitmapUtil.footboard_spiked_bitmap;
     }
 }
 
--(void) setToolNum:(int) num{
+- (void)setToolNum:(int)num {
     toolNum = num;
 }
 
--(int)toolNum{
-//    toolNum = num;
+- (int)toolNum {
     return toolNum;
 }
 
-+(int)NOTOOL{
++ (int)NOTOOL {
     return NOTOOL;
 }
 
-+(int)BOMB{
++ (int)BOMB {
     return BOMB;
 }
 
-+(int)CURE{
++ (int)CURE {
     return CURE;
 }
 
-+(int)BOMB_EXPLODE{
++ (int)BOMB_EXPLODE {
     return BOMB_EXPLODE;
 }
 
-+(int)EAT_MAN_TREE{
++ (int)EAT_MAN_TREE {
     return EAT_MAN_TREE;
 }
 
--(float)x{
+- (float)x {
     return x;
 }
 
--(float)y{
+- (float)y {
     return y;
 }
 
--(int)which{
+- (int)which {
     return which;
 }
 
--(SKTexture *)bitmap{
+- (SKTexture *)bitmap {
     return bitmap;
 }
 

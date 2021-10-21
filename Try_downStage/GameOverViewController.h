@@ -23,5 +23,6 @@
 - (IBAction)goToMenu:(id)sender;
 - (IBAction)sendScore:(id)sender;
 - (IBAction)restartClick:(id)sender;
--(void)setScore:(int)score;
+- (void)setScore:(int)score;
+
 @end

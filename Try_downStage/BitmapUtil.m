@@ -11,10 +11,10 @@
 
 @implementation BitmapUtil
 
-static BitmapUtil* instance;
+static BitmapUtil *instance;
 
--(id)init{
-    if(self = [super init]){
+- (id)init {
+    if (self = [super init]) {
         self.PLAYER_WIDTH_PERSENT = 2.5;
         self.TOOL_WIDTH_PERSENT = 4;
         self.FIREBALL_WIDTH_PERSENT = 3;
@@ -252,7 +252,7 @@ static BitmapUtil* instance;
         //				(int)((float)fire_ball.getHeight()
         //						/ fire_ball.getWidth() * fireballWidth));
         
-        self.fire_ball_size = CGSizeMake(fireballWidth, (int)((float)self.fire_ball.size.height/ self.fire_ball.size.height * fireballWidth));
+        self.fire_ball_size = CGSizeMake(fireballWidth, (int)((float)self.fire_ball.size.height / self.fire_ball.size.height * fireballWidth));
         
         self.numberImageArray = [NSArray arrayWithObjects:[UIImage imageNamed:@"s0"], [UIImage imageNamed:@"s1"], [UIImage imageNamed:@"s2"], [UIImage imageNamed:@"s3"], [UIImage imageNamed:@"s4"], [UIImage imageNamed:@"s5"], [UIImage imageNamed:@"s6"], [UIImage imageNamed:@"s7"], [UIImage imageNamed:@"s8"], [UIImage imageNamed:@"s9"], nil];
         
@@ -260,7 +260,7 @@ static BitmapUtil* instance;
     return self;
 }
 
--(UIImage*)getNumberImage:(int)number{
+- (UIImage *)getNumberImage:(int)number {
     UIImage* numberImage;
     switch (number) {
         case 0:

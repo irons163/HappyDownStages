@@ -20,22 +20,22 @@ const static int INFINITY_LEVEL = 13; // start level:0
 @property (nonatomic) NSTimeInterval lastUpdateTimeInterval;
 @property (nonatomic) NSTimeInterval lastSpawnCreateFootboardTimeInterval;
 
-+(id)sceneWihtSize:(CGSize)size withBackground:(SKTexture*)background withHeight:(int)height withWidth:(int) width withLeve:(int)level;
++ (id)sceneWihtSize:(CGSize)size withBackground:(SKTexture *)background withHeight:(int)height withWidth:(int) width withLeve:(int)level;
 
-+(void)setNextBackground:(SKTexture*)nextBg;
++ (void)setNextBackground:(SKTexture*)nextBg;
 
-+(int)LEFT;
-+(int)RIGHT;
++ (int)LEFT;
++ (int)RIGHT;
 
-+(int)gameFlag;
-+(void)setGameFlag:(bool)_gameFlag;
++ (int)gameFlag;
++ (void)setGameFlag:(bool)_gameFlag;
 
-+(int)FOOTBOARD_WIDTH_PERSENT;
++ (int)FOOTBOARD_WIDTH_PERSENT;
 
--(NSString*) getRandomBgResId;
+- (NSString *)getRandomBgResId;
 
--(void)setAdClickable:(bool)clickable;
+- (void)setAdClickable:(bool)clickable;
 
-@property (nonatomic) SKSpriteNode * timeMinuteTensDigital, *timeMinuteSingalDigital, *timeQmark, *timeScecondTensDigital, *timeSecondSingalDigital, *gameLevelSingleNode, *gameLevelTenNode;
+@property (nonatomic) SKSpriteNode *timeMinuteTensDigital, *timeMinuteSingalDigital, *timeQmark, *timeScecondTensDigital, *timeSecondSingalDigital, *gameLevelSingleNode, *gameLevelTenNode;
 
 @end

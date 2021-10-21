@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MainMenuViewController : UIViewController
+
 - (IBAction)startGameClick:(id)sender;
 - (IBAction)rankClick:(id)sender;
 

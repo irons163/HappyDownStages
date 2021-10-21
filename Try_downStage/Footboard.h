@@ -9,36 +9,36 @@
 #import <SpriteKit/SpriteKit.h>
 #import "ToolUtil.h"
 
-static const int NOTOOL =0;
-static const int BOMB =1;
-static const int CURE =2;
-static const int BOMB_EXPLODE =3;
+static const int NOTOOL = 0;
+static const int BOMB = 1;
+static const int CURE = 2;
+static const int BOMB_EXPLODE = 3;
 static const int EAT_MAN_TREE = 4;
 
 @interface Footboard : SKSpriteNode
 
-@property (nonatomic) ToolUtil* tool;
+@property (nonatomic) ToolUtil *tool;
 
--(void)setFrameX:(int) x y:(int) y h:(int) height w:(int) width;
--(void)drawDy:(float) dy;
+- (void)setFrameX:(int)x y:(int)y h:(int)height w:(int)width;
+- (void)drawDy:(float)dy;
 
--(void) setWhich:(int) witch;
--(void) setToolNum:(int) num;
--(void) setCount;
+- (void) setWhich:(int)witch;
+- (void) setToolNum:(int)num;
+- (void) setCount;
 
--(int)toolNum;
+- (int)toolNum;
 
--(float)x;
--(float)y;
+- (float)x;
+- (float)y;
 
--(int)which;
+- (int)which;
 
--(SKTexture*)bitmap;
+- (SKTexture*)bitmap;
 
-+(int)NOTOOL;
-+(int)BOMB;
-+(int)CURE;
-+(int)BOMB_EXPLODE;
-+(int)EAT_MAN_TREE;
++ (int)NOTOOL;
++ (int)BOMB;
++ (int)CURE;
++ (int)BOMB_EXPLODE;
++ (int)EAT_MAN_TREE;
 
 @end

@@ -25,7 +25,7 @@ extern const int INFINITY_LEVEL;
     
 }
 
--(void)viewDidAppear:(BOOL)animated{
+- (void)viewDidAppear:(BOOL)animated {
     [self.collectionView reloadData];
 }
 
@@ -34,44 +34,42 @@ extern const int INFINITY_LEVEL;
     // Dispose of any resources that can be recreated.
 }
 
--(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
 
--(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return INFINITY_LEVEL+1;
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return INFINITY_LEVEL + 1;
 }
 
--(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString * const reuseIdentifier = @"Cell";
-        UICollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+        UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    UIImageView* photoImageView = (UIImageView*)[cell viewWithTag:100];
+    UIImageView *photoImageView = (UIImageView*)[cell viewWithTag:100];
     
-    photoImageView.image = [[BitmapUtil sharedInstance] getNumberImage:(indexPath.item+1)/10];
+    photoImageView.image = [[BitmapUtil sharedInstance] getNumberImage:(indexPath.item + 1) / 10];
     
     UIImageView* photoImageView2 = (UIImageView*)[cell viewWithTag:200];
     
-    photoImageView2.image = [[BitmapUtil sharedInstance] getNumberImage:(indexPath.item+1)%10];
+    photoImageView2.image = [[BitmapUtil sharedInstance] getNumberImage:(indexPath.item + 1) % 10];
     
     int maxLevel = [[NSUserDefaults standardUserDefaults] integerForKey:@"level"];
     
     UIImageView* photoImageView3 = (UIImageView*)[cell viewWithTag:300];
-    if(indexPath.item <= maxLevel){
+    if (indexPath.item <= maxLevel) {
         photoImageView3.hidden = YES;
-    }else{
+    } else {
         photoImageView3.hidden = NO;
     }
     
     return cell;
 }
 
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
     int maxLevel = [[NSUserDefaults standardUserDefaults] integerForKey:@"level"];
-    if(indexPath.item > maxLevel)
-        return;
     
     GameLevelViewController * gameLevelViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"GameLevelViewController"];
     
@@ -81,15 +79,5 @@ extern const int INFINITY_LEVEL;
     
     [self.navigationController pushViewController:gameLevelViewController animated:YES];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

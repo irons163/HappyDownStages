@@ -11,21 +11,21 @@
 
 @implementation MyUtils
 
-AVAudioPlayer * backgroundMusicPlayer;
+AVAudioPlayer *backgroundMusicPlayer;
 
-NSArray * musicLevelId = {
+NSArray *musicLevelId = {
     @"level_one_music", @"level_two_music",
     @"level_three_music" };
 
-+(void)playBackgroundMusic:(NSString*)filename {
-    NSURL * url = [[NSBundle mainBundle] URLForResource:filename withExtension:nil];
++ (void)playBackgroundMusic:(NSString *)filename {
+    NSURL *url = [[NSBundle mainBundle] URLForResource:filename withExtension:nil];
     
     if (url == nil) {
         NSLog(@"Could not find file:%@",filename);
         return;
     }
     
-    NSError * error;
+    NSError *error;
     backgroundMusicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
     
     if (backgroundMusicPlayer == nil) {
@@ -38,22 +38,17 @@ NSArray * musicLevelId = {
     backgroundMusicPlayer.numberOfLoops = -1;
     [backgroundMusicPlayer prepareToPlay];
     [backgroundMusicPlayer play];
-    
-//    var error: NSError? = nil backgroundMusicPlayer =
-//    AVAudioPlayer(contentsOfURL: url, error: &error) if backgroundMusicPlayer == nil {
-//        println("Could not create audio player: \(error!)")
-//        return
-    }
+}
 
-+(void)playBackgroundMusicLevel:(int)level {
-    NSURL * url = [[NSBundle mainBundle] URLForResource:musicLevelId[level] withExtension:nil];
++ (void)playBackgroundMusicLevel:(int)level {
+    NSURL *url = [[NSBundle mainBundle] URLForResource:musicLevelId[level] withExtension:nil];
     
     if (url == nil) {
         NSLog(@"Could not find file:%@",musicLevelId[level]);
         return;
     }
     
-    NSError * error;
+    NSError *error;
     backgroundMusicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
     
     if (backgroundMusicPlayer == nil) {
@@ -66,23 +61,18 @@ NSArray * musicLevelId = {
     backgroundMusicPlayer.numberOfLoops = -1;
     [backgroundMusicPlayer prepareToPlay];
     [backgroundMusicPlayer play];
-    
-    //    var error: NSError? = nil backgroundMusicPlayer =
-    //    AVAudioPlayer(contentsOfURL: url, error: &error) if backgroundMusicPlayer == nil {
-    //        println("Could not create audio player: \(error!)")
-    //        return
 }
 
-+(void)playRamdonMusic{
++ (void)playRamdonMusic {
     int level = arc4random_uniform(3);
-    NSURL * url = [[NSBundle mainBundle] URLForResource:musicLevelId[level] withExtension:nil];
+    NSURL *url = [[NSBundle mainBundle] URLForResource:musicLevelId[level] withExtension:nil];
     
     if (url == nil) {
         NSLog(@"Could not find file:%@",musicLevelId[level]);
         return;
     }
     
-    NSError * error;
+    NSError *error;
     backgroundMusicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
     
     if (backgroundMusicPlayer == nil) {
@@ -97,15 +87,15 @@ NSArray * musicLevelId = {
     [backgroundMusicPlayer play];
 }
 
-+(void)backgroundMusicPlayerStop{
++ (void)backgroundMusicPlayerStop {
     [backgroundMusicPlayer stop];
 }
 
-+(void)backgroundMusicPlayerPause{
++ (void)backgroundMusicPlayerPause {
     [backgroundMusicPlayer pause];
 }
 
-+(void)backgroundMusicPlayerPlay{
++ (void)backgroundMusicPlayerPlay {
     [backgroundMusicPlayer play];
 }
 

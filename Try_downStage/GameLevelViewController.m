@@ -13,11 +13,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    if(PLAYER_SEX==GIRL){
+    
+    if (PLAYER_SEX == GIRL) {
         self.girlCheckView.hidden = NO;
         self.boyCheckVIew.hidden = YES;
-    }else{
+    } else {
         self.girlCheckView.hidden = YES;
         self.boyCheckVIew.hidden = NO;
     }
@@ -41,36 +41,19 @@
 }
 
 - (IBAction)playClick:(id)sender {
-//    ViewController * viewController = [ViewController new];
-//    winDialogViewController.gameDelegate = self;
-
-    ViewController * viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
-    
-//    [self presentViewController:viewController animated:YES completion:^{
-//        //[reset];
-//    }];
-    
-    
-    
-//    [self dismissViewControllerAnimated:YES completion:nil];
-//    [self.navigationController presentViewController:viewController animated:YES completion:^{
-//        //        [reset];
-//    }];
-//    [self.navigationController popViewControllerAnimated:YES];
+    ViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
     [self.navigationController pushViewController:viewController animated:YES];
-//    [self dismissViewControllerAnimated:YES completion:nil];
-    
 }
 
-+(int)PLAYER_SEX{
++ (int)PLAYER_SEX {
     return PLAYER_SEX;
 }
 
-+(int)GIRL{
++ (int)GIRL {
     return GIRL;
 }
 
-+(int)BOY{
++ (int)BOY {
     return BOY;
 }
 

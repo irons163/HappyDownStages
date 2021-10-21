@@ -15,18 +15,17 @@ typedef enum {
 
 SEX PLAYER_SEX;
 
-@interface GameLevelViewController : UIViewController{
-//    SEX PLAYER_SEX;
-}
+@interface GameLevelViewController : UIViewController
+
 @property (strong, nonatomic) IBOutlet UIImageView *girlCheckView;
 @property (strong, nonatomic) IBOutlet UIImageView *boyCheckVIew;
+
 - (IBAction)girlClick:(id)sender;
 - (IBAction)boyClick:(id)sender;
 - (IBAction)playClick:(id)sender;
 
-+(int)PLAYER_SEX;
++ (int)PLAYER_SEX;
++ (int)GIRL;
++ (int)BOY;
 
-+(int)GIRL;
-
-+(int)BOY;
 @end

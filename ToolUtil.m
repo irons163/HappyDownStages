@@ -10,7 +10,7 @@
 #import "Footboard.h"
 #import "BitmapUtil.h"
 
-@implementation ToolUtil{
+@implementation ToolUtil {
     float tool_x;
     float tool_y;
     int tool_width;
@@ -22,22 +22,22 @@
     NSTimer* eatThraed;
 }
 
--(void)setToolUtilWithX:(float)x Y:(float)y type:(int) type{
-    if(type==Footboard.BOMB){
-        bitmap = ((BitmapUtil*)[BitmapUtil sharedInstance]).tool_bomb_bitmap;
-    }else if(type==Footboard.BOMB_EXPLODE){
-        bitmap = ((BitmapUtil*)[BitmapUtil sharedInstance]).tool_bomb_explosion_bitmap;
+- (void)setToolUtilWithX:(float)x Y:(float)y type:(int)type {
+    if (type == Footboard.BOMB) {
+        bitmap = ((BitmapUtil *)[BitmapUtil sharedInstance]).tool_bomb_bitmap;
+    } else if(type == Footboard.BOMB_EXPLODE) {
+        bitmap = ((BitmapUtil *)[BitmapUtil sharedInstance]).tool_bomb_explosion_bitmap;
         
-        if(bombExplodeThread!=nil){
+        if (bombExplodeThread != nil) {
             [bombExplodeThread invalidate];
         }
         
-        self.isExploding=true;
+        self.isExploding = true;
         bombExplodeThread = [NSTimer scheduledTimerWithTimeInterval:0.3 target:self selector:@selector(bombExploding) userInfo:nil repeats:NO];
-    }else if(type==Footboard.EAT_MAN_TREE){
-        bitmap = ((BitmapUtil*)[BitmapUtil sharedInstance]).toll_eat_man_tree2_bitmap;
-    }else{
-        bitmap = ((BitmapUtil*)[BitmapUtil sharedInstance]).toll_cure_bitmap;
+    } else if(type == Footboard.EAT_MAN_TREE) {
+        bitmap = ((BitmapUtil *)[BitmapUtil sharedInstance]).toll_eat_man_tree2_bitmap;
+    } else {
+        bitmap = ((BitmapUtil *)[BitmapUtil sharedInstance]).toll_cure_bitmap;
     }
     tool_width=30;
     tool_x = x - tool_width/2;
@@ -49,41 +49,41 @@
     self.anchorPoint = CGPointMake(0, 0);
 }
 
--(void)bombExploding{
+- (void)bombExploding {
     self.isExploding=false;
 }
 
--(void)draw:(float) dy {
+- (void)draw:(float)dy {
     tool_y += dy;
     self.position = CGPointMake(tool_x, tool_y);
 }
 
--(float)tool_x{
+- (float)tool_x {
     return tool_x;
 }
 
--(int)tool_width{
+- (int)tool_width {
     return tool_width;
 }
 
--(void) doEat{
-    if(_type==Footboard.EAT_MAN_TREE){
-        if(eatThraed==nil){
-            eatThraed = [NSTimer scheduledTimerWithTimeInterval:0.4 target:self selector:@selector(eating) userInfo:nil repeats:YES];
+- (void)doEat {
+    if(_type == Footboard.EAT_MAN_TREE){
+        if (eatThraed == nil) {
+            eatThraed = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(eating) userInfo:nil repeats:YES];
         }
     }
 }
 
--(void)eating{
-    if(count==0){
-        bitmap = ((BitmapUtil*)[BitmapUtil sharedInstance]).toll_eat_man_tree_bitmap;
+- (void)eating {
+    if (count == 0) {
+        bitmap = ((BitmapUtil *)[BitmapUtil sharedInstance]).toll_eat_man_tree_bitmap;
         count++;
-    }else if(count==1){
-        bitmap = ((BitmapUtil*)[BitmapUtil sharedInstance]).toll_eat_man_tree3_bitmap;
+    } else if (count == 1) {
+        bitmap = ((BitmapUtil *)[BitmapUtil sharedInstance]).toll_eat_man_tree3_bitmap;
         isEated = true;
         count++;
-    }else{
-        bitmap = ((BitmapUtil*)[BitmapUtil sharedInstance]).toll_eat_man_tree2_bitmap;
+    } else {
+        bitmap = ((BitmapUtil *)[BitmapUtil sharedInstance]).toll_eat_man_tree2_bitmap;
         count = 0;
         isEated = false;
         [eatThraed invalidate];
@@ -92,8 +92,8 @@
     self.texture = bitmap;
 }
 
--(BOOL)isEated{
-    if(isEated){
+- (BOOL)isEated {
+    if (isEated) {
         isEated = false;
         return true;
     }

@@ -10,10 +10,11 @@
 
 @interface MyUtils : NSObject
 
-+(void)playBackgroundMusic:(NSString*)filename;
-+(void)backgroundMusicPlayerStop;
-+(void)backgroundMusicPlayerPause;
-+(void)backgroundMusicPlayerPlay;
-+(void)playBackgroundMusicLevel:(int)level;
-+(void)playRamdonMusic;
++ (void)playBackgroundMusic:(NSString *)filename;
++ (void)backgroundMusicPlayerStop;
++ (void)backgroundMusicPlayerPause;
++ (void)backgroundMusicPlayerPlay;
++ (void)playBackgroundMusicLevel:(int)level;
++ (void)playRamdonMusic;
+
 @end

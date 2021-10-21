@@ -10,7 +10,7 @@
 
 @interface FireBall : SKSpriteNode
 
--(void)setScreenWidth:(int) screenWidth;
--(void)moveDy:(float) dy Dx:(float) dx;
+- (void)setScreenWidth:(int)screenWidth;
+- (void)moveDy:(float)dy Dx:(float)dx;
 
 @end

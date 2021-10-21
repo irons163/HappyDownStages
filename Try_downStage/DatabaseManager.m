@@ -20,7 +20,7 @@ static DatabaseManager* instance;
     return instance;
 }
 
--(NSManagedObjectContext *)managedObjectContext{
+- (NSManagedObjectContext *)managedObjectContext {
     NSManagedObjectContext* context = nil;
     id delegate = [[UIApplication sharedApplication] delegate];
     if([delegate performSelector:@selector(managedObjectContext)]){
@@ -29,8 +29,8 @@ static DatabaseManager* instance;
     return context;
 }
 
--(void)insertWithName:(NSString*)name withScore:(int)score{
-    NSManagedObjectContext* context = [self managedObjectContext];
+- (void)insertWithName:(NSString *)name withScore:(int)score {
+    NSManagedObjectContext *context = [self managedObjectContext];
     NSManagedObject* entity = [NSEntityDescription insertNewObjectForEntityForName:@"Entity" inManagedObjectContext:context];
     [entity setValue:name forKey:@"name"];
     [entity setValue:[NSNumber numberWithInt:score] forKey:@"score"];
@@ -41,8 +41,8 @@ static DatabaseManager* instance;
     }
 }
 
--(NSArray*)load{
-    NSManagedObjectContext* context = [self managedObjectContext];
+- (NSArray *)load {
+    NSManagedObjectContext *context = [self managedObjectContext];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription
                                    entityForName:@"Entity" inManagedObjectContext:context];
