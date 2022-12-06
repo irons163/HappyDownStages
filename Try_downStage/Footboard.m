@@ -93,20 +93,8 @@
 - (void)drawDy:(float)dy {
     y += dy;
     self.position = CGPointMake(self.position.x, y);
-    CGRect rect1 = CGRectMake(x,y,width,height);
     
     if (which == 1) { //往左地板
-        //圖片有兩張，進行切換，但這裡的方法很笨，應該有更好的方法
-        //			if(animStep<10){
-        //				bitmap = bitmap1;
-        //				animStep++;
-        //			}else if(animStep>=10 && animStep<19){
-        //				bitmap = bitmap2;
-        //				animStep++;
-        //			}else{
-        //				animStep=0;
-        //			}
-        
         if (animStep % 3 == 0) {
             bitmap = bitmapUtil.footboard_moving_left1_bitmap;
             animStep++;

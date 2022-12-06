@@ -55,7 +55,7 @@ extern const int INFINITY_LEVEL;
     
     photoImageView2.image = [[BitmapUtil sharedInstance] getNumberImage:(indexPath.item + 1) % 10];
     
-    int maxLevel = [[NSUserDefaults standardUserDefaults] integerForKey:@"level"];
+    NSInteger maxLevel = [[NSUserDefaults standardUserDefaults] integerForKey:@"level"];
     
     UIImageView* photoImageView3 = (UIImageView*)[cell viewWithTag:300];
     if (indexPath.item <= maxLevel) {
@@ -68,12 +68,9 @@ extern const int INFINITY_LEVEL;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    int maxLevel = [[NSUserDefaults standardUserDefaults] integerForKey:@"level"];
-    
     GameLevelViewController * gameLevelViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"GameLevelViewController"];
     
-    int willPlayLevel = indexPath.item;
+    NSInteger willPlayLevel = indexPath.item;
     [[NSUserDefaults standardUserDefaults] setInteger:willPlayLevel forKey:@"willPlaylevel"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     

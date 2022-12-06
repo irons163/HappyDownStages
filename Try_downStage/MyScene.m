@@ -649,8 +649,8 @@ int drawCount;
             fireBall.position = CGPointMake(0, self.frame.size.height);
             fireBall.size = ((BitmapUtil *)[BitmapUtil sharedInstance]).fire_ball_size;
             [fireBall setScreenWidth:self.frame.size.width];
-//            [fireballs addObject:fireBall];
-//            [self addChild:fireBall];
+            //            [fireballs addObject:fireBall];
+            //            [self addChild:fireBall];
             
             drawCount = 0;
         }
@@ -687,7 +687,7 @@ int drawCount;
             bool remove = false;
             Footboard* ene = f[k];
             int i = arc4random_uniform(20);
-
+            
             ToolUtil* toolUtil = ene.tool;
             if (!toolUtil) {
                 
@@ -781,7 +781,7 @@ int drawCount;
                         if (life < 0) {
                             life = 0;
                         }
-               
+                        
                         redNode.hidden = false;
                     }
                     

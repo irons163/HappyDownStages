@@ -38,11 +38,11 @@
     adIndex = 0;
     self.texture = ads[adIndex];
     
-    NSTimer *timer =  [NSTimer scheduledTimerWithTimeInterval:2.0
-                                                        target:self
-                                                      selector:@selector(changeAd)
-                                                      userInfo:nil
-                                                       repeats:YES];
+    [NSTimer scheduledTimerWithTimeInterval:2.0
+                                     target:self
+                                   selector:@selector(changeAd)
+                                   userInfo:nil
+                                    repeats:YES];
     
     button = [SKSpriteNode spriteNodeWithImageNamed:@"btn_Close-hd"];
     button.size = CGSizeMake(30, 30);
@@ -75,7 +75,7 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     if (self.hidden)
         return;
-        
+    
     UITouch *touch = [touches anyObject];
     CGPoint location = [touch locationInNode:self];
     

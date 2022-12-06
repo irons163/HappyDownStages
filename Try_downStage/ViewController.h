@@ -20,6 +20,6 @@
 
 @end
 
-@interface ViewController : UIViewController<gameDelegate, ADBannerViewDelegate>
+@interface ViewController : UIViewController<gameDelegate>
 
 @end

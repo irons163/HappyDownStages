@@ -13,9 +13,15 @@
 
 AVAudioPlayer *backgroundMusicPlayer;
 
-NSArray *musicLevelId = {
-    @"level_one_music", @"level_two_music",
-    @"level_three_music" };
+static NSArray *musicLevelId = nil;
+
++ (void)initialize {
+    // do not run for derived classes
+    if (self != [MyUtils class])
+        return;
+
+    musicLevelId = @[@"level_one_music", @"level_two_music", @"level_three_music"];
+}
 
 + (void)playBackgroundMusic:(NSString *)filename {
     NSURL *url = [[NSBundle mainBundle] URLForResource:filename withExtension:nil];

@@ -12,13 +12,13 @@
 
 @property bool isExploding;
 
-//-(void)setToolUtilWithFootboardX:(float) footboard_x footboardY:(float) footboard_y type:(int) type;
--(void)setToolUtilWithX:(float)x Y:(float)y type:(int) type;
--(void)draw:(float) dy;
+- (void)setToolUtilWithX:(float)x Y:(float)y type:(int)type;
+- (void)draw:(float) dy;
 
--(float)tool_x;
--(int)tool_width;
+- (float)tool_x;
+- (int)tool_width;
 
--(void) doEat;
--(BOOL)isEated;
+- (void)doEat;
+- (BOOL)isEated;
+
 @end

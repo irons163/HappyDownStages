@@ -14,7 +14,7 @@
     float tool_x;
     float tool_y;
     int tool_width;
-    SKTexture* bitmap;
+    SKTexture *bitmap;
     int _type;
     NSTimer* bombExplodeThread;
     BOOL isEated;
@@ -39,7 +39,7 @@
     } else {
         bitmap = ((BitmapUtil *)[BitmapUtil sharedInstance]).toll_cure_bitmap;
     }
-    tool_width=30;
+    tool_width = 30;
     tool_x = x - tool_width/2;
     tool_y = y;
     _type = type;
